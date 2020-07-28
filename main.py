@@ -43,7 +43,7 @@ def process_page(page_source):
 fg = FeedGenerator()
 fg.load_extension('podcast')
 fg.podcast.itunes_category('Science & Medicine','Natural Sciences')
-fg.id('https://www.indefenseofplants.com/podcast')
+fg.id('Mastel Generated: Indefense of Plants')
 fg.title('In Defense Of Plants')
 fg.description('It would seem that most people don’t pay any attention to plants unless they are pretty or useful in some way. I reject this reality outright. Plants are everything on this planet. They have this amazing ability to use our nearest star to break apart water and CO2 gas in order to grow and reproduce. From the smallest duckweed to the tallest redwood, the botanical world is full of amazing evolutionary stories. I am here to tell those stories. My name is Matt and I am obsessed with the botanical world. In Defense of Plants is my way of sharing that love with you. ')
 fg.author({'name': 'Matt Candeias', 'email':'matt@indefenseofplants.com'})

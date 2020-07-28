@@ -11,3 +11,10 @@ This script will scrape the podcast website and generate a custom RSS feed based
 I recommend creating a virtual environment to run this script out of. Once created and activated, install the provided requirements file.
 
 This script relies on FireFox and the latest [geckodriver ](https://github.com/mozilla/geckodriver) provided by Mozilla. If Firefox is not installed on your system, install it as normal. Place a copy of the geckodriver in this directory.
+
+### Running
+
+```
+python main.py
+scp idop.xml your-ssh-server:{your publicly available webspace}
+```

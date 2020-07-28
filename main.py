@@ -11,7 +11,7 @@ import requests
 
 # Custom headers to prime the server to tell us how large all these mp3 files are without actually
 # downloading all of them
-headers = {"Range": "bytes=0-1"}
+# headers = {"Range": "bytes=0-1"}
 
 def process_page(page_source):
     soup        = bs4.BeautifulSoup(page_source, 'html.parser')
@@ -27,10 +27,10 @@ def process_page(page_source):
         # create the resource link
         url   = eaudio['data-url']
 
-        # We're not saving the first requests call. It's only 2 bytes of data and is called
-        # Solely to prime the 'Content-Length' header in the second response
-        requests.get(url, headers=headers)
-        size  = requests.head(url).headers['Content-Length']
+        # # We're not saving the first requests call. It's only 2 bytes of data and is called
+        # # Solely to prime the 'Content-Length' header in the second response
+        # requests.get(url, headers=headers)
+        # size  = requests.head(url).headers['Content-Length']
         fe.enclosure(url, size, 'audio/mp3')
 
         # episode length
